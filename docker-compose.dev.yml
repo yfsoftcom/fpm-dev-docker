@@ -1,5 +1,15 @@
 version: '3'
 services:
+    mongo:
+        image: mongo
+        container_name: mongo
+        # restart: always
+        volumes:
+          - ./conf/mongo/data/:/data/db/
+        ports:
+            - 27017:27017
+        networks:
+            - dev-network
     pg:
         image: postgres:13-alpine
         container_name: pgserver
