@@ -15,14 +15,14 @@ chmod:
 docker-dev:
 	docker-compose -f docker-compose.dev.yml up --build -d
 
-docker-mqtt:
-	docker-compose -f docker-compose.mqtt.yml up --build -d
+docker-iot:
+	docker-compose -f docker-compose.iot.yml up --build -d
 
 shut-dev:
 	docker-compose -f docker-compose.dev.yml down
 
-shut-mqtt:
-	docker-compose -f docker-compose.mqtt.yml down
+shut-iot:
+	docker-compose -f docker-compose.iot.yml down
 
 
 
