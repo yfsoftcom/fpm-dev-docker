@@ -33,4 +33,4 @@ services:
     restart: always
 networks:
   dev-network: 
-      driver: bridge
+    driver: bridge
