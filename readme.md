@@ -1,6 +1,6 @@
-#fpm-dev-docker
+# fpm-dev-docker
 
-pg: 
+pg:
 - db localtest
 - user localdev
 - pass Start123
@@ -13,4 +13,4 @@ mysql:
 - pass 741235896
 
 influx:
-- port 
+- port

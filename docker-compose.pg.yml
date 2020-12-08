@@ -1,0 +1,19 @@
+version: '3'
+services:
+  pg:
+    image: postgres:13-alpine
+    container_name: pgserver
+    restart: always
+    volumes:
+      - ./conf/pg/data:/var/lib/postgresql/data
+      - ./conf/pg/crimson.sql:/docker-entrypoint-initdb.d/initdb.sql
+    ports:
+      - 5432:5432
+    environment:
+      TZ: Asia/Shanghai
+      POSTGRES_HOST_AUTH_METHOD: trust
+    networks:
+      - dev-network
+networks:
+  dev-network:
+    driver: bridge
