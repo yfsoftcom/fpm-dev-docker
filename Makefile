@@ -18,6 +18,9 @@ docker-dev:
 docker-iot:
 	docker-compose -f docker-compose.iot.yml up --build -d
 
+docker-pg:
+	docker-compose -f docker-compose.pg.yml up -d
+
 shut-dev:
 	docker-compose -f docker-compose.dev.yml down
 
