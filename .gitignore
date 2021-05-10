@@ -5,3 +5,4 @@ conf/*/data/*.aof
 conf/*/data
 conf/*/backup
 logs/
+*.tar.gz

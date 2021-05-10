@@ -24,7 +24,20 @@ shut-dev:
 shut-iot:
 	docker-compose -f docker-compose.iot.yml down
 
+backup-mysql:
+	docker exec mysqlserver bash -c "cd /var && ./backup.sh fpm_open_iot"
 
+backup-influx:
+	docker exec influxdb bash -c "backupinflux.sh"
+
+init-influx:
+	docker exec influxdb bash -c "influx_init.sh"
+
+restore-mysql:
+	docker exec mysqlserver bash -c "cd /var && ./restore.sh fpm_open_iot"
+
+restore-influx:
+	docker exec influxdb bash -c "restoreinflux.sh"
 
 init-influx:
 	docker exec influxdb bash -c "influx_init.sh"

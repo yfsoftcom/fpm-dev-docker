@@ -17,6 +17,15 @@ services:
     networks:
       - dev-network
     restart: always
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+        - 8082:8080
+    environment:
+        TZ: "Asia/Shanghai"
+    networks:
+        - dev-network
   influxdb:
     image: "influxdb:1.7-alpine"
     container_name: "influxdb"
