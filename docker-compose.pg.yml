@@ -3,7 +3,6 @@ services:
   pg:
     image: postgres:13-alpine
     container_name: pgserver
-    restart: always
     volumes:
       - ./conf/pg/data:/var/lib/postgresql/data
       - ./conf/pg/crimson.sql:/docker-entrypoint-initdb.d/initdb.sql
